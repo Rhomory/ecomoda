@@ -207,6 +207,19 @@
 }
 @media (max-width: 540px) {
   .rel-grid { grid-template-columns: 1fr; }
-  .add-row { flex-wrap: wrap; }
-  .add-cart { flex: 100%; order: 3; }
+  .add-row { flex-wrap: wrap; gap: 10px; }
+  .qty { flex: 0 0 auto; }
+  .add-cart {
+    flex: 1 1 auto;
+    order: 0;
+    padding: 12px 18px !important;
+    font-size: 10px;
+  }
+  .fav-btn { order: 1; }
+  .tab-bar { gap: 0; overflow-x: auto; flex-wrap: nowrap; }
+  .tab { white-space: nowrap; font-size: 11px; padding: 12px 14px; }
+  .breadcrumb { font-size: 11px; }
+  .breadcrumb-wrap { padding: 16px 0 0; }
+  .galeria-thumbs { gap: 6px; }
+  .galeria-thumbs .thumb { width: 56px; height: 70px; }
 }

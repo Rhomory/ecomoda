@@ -146,12 +146,30 @@
 .form-success.show { display: block; }
 
 /* Mapa */
+.mapa-section { padding: 0 0 80px; position: relative; }
 .mapa-section iframe {
   display: block;
   border: 0;
+  filter: grayscale(0.15) contrast(1.05);
+}
+.mapa-cta {
+  text-align: center;
+  margin-top: -28px;
+  position: relative;
+  z-index: 2;
+}
+.mapa-cta .btn {
+  background: var(--blanco);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 900px) {
   .ctc-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .ctc-form, .ctc-info { padding: 22px 18px; }
+  .ctc-hero h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .ctc-item { grid-template-columns: 40px 1fr; gap: 12px; }
+  .ctc-ic { width: 40px; height: 40px; }
 }

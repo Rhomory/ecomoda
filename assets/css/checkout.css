@@ -111,6 +111,16 @@
 }
 @media (max-width: 540px) {
   .form-grid { grid-template-columns: 1fr; }
+  .checkout-form { padding: 22px 18px; }
+  .checkout-resumen { padding: 20px 18px; position: static; }
+  .checkout-section { padding: 28px 0 60px; }
+  .steps .step { padding: 0 8px; font-size: 10px; }
+  .steps .step:not(:last-child)::after { width: 18px; margin-left: 8px; }
+  .pago-opt { grid-template-columns: 24px 1fr; }
+  .pago-logos { grid-column: 1 / -1; justify-content: flex-start; margin-top: 6px; }
+  .nb-row { grid-template-columns: 1fr 1fr; }
+  .niubiz-modal-content { max-width: 100%; }
+  .nb-body { padding: 18px 16px; }
 }
 
 /* Métodos de pago */

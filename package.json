@@ -2,11 +2,9 @@
   "name": "ecomoda-demo",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "EcoModa S.A. — Demo de moda sostenible con pasarela Niubiz (sandbox)",
   "scripts": {
     "serve": "npx serve ."
-  },
-  "engines": {
-    "node": ">=18"
   }
 }

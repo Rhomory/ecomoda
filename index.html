@@ -60,46 +60,126 @@
     <div class="menu-overlay" id="menu-overlay"></div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <button class="hero-arrow hero-arrow-l" aria-label="Anterior"><i class="icon" data-lucide="chevron-left"></i></button>
+  <!-- HERO SLIDER -->
+  <section class="hero" id="hero-slider">
+    <button class="hero-arrow hero-arrow-l" id="hero-prev" aria-label="Anterior"><i class="icon" data-lucide="chevron-left"></i></button>
 
-    <div class="hero-inner container">
-      <div class="hero-left" data-anim="fade-right">
-        <h1>
-          <span class="hero-line1">VISTE TU ESTILO,</span>
-          <span class="hero-line2">cuida el planeta.</span>
-        </h1>
-        <p class="hero-desc">Moda sostenible que refleja tu esencia y respeta la naturaleza.</p>
-        <a href="tienda.html" class="btn btn-primary">
-          Descubrir colección <i class="icon" data-lucide="arrow-right"></i>
-        </a>
-        <ul class="hero-bullets">
-          <li>
-            <span class="hb-ic"><i class="icon" data-lucide="leaf"></i></span>
-            <div><strong>Moda sostenible</strong><small>con propósito</small></div>
-          </li>
-          <li>
-            <span class="hb-ic"><i class="icon" data-lucide="recycle"></i></span>
-            <div><strong>Materiales eco</strong><small>amigables</small></div>
-          </li>
-          <li>
-            <span class="hb-ic"><i class="icon" data-lucide="truck"></i></span>
-            <div><strong>Envío a todo</strong><small>el Perú</small></div>
-          </li>
-        </ul>
-        <div class="hero-dots">
-          <span class="active"></span><span></span><span></span><span></span><span></span>
+    <div class="hero-track" id="hero-track">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <div class="hero-inner container">
+          <div class="hero-left">
+            <h1>
+              <span class="hero-line1">VISTE TU ESTILO,</span>
+              <span class="hero-line2">cuida el planeta.</span>
+            </h1>
+            <p class="hero-desc">Moda sostenible que refleja tu esencia y respeta la naturaleza.</p>
+            <a href="tienda.html" class="btn btn-primary">
+              Descubrir colección <i class="icon" data-lucide="arrow-right"></i>
+            </a>
+            <ul class="hero-bullets">
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="leaf"></i></span>
+                <div><strong>Moda sostenible</strong><small>con propósito</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="recycle"></i></span>
+                <div><strong>Materiales eco</strong><small>amigables</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="truck"></i></span>
+                <div><strong>Envío a todo</strong><small>el Perú</small></div>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right">
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900" alt="Modelo con prenda sostenible" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-right" data-anim="fade-left" data-anim-delay="200">
-        <div class="hero-photo">
-          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900" alt="Modelo con prenda sostenible" loading="lazy">
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <div class="hero-inner container">
+          <div class="hero-left">
+            <h1>
+              <span class="hero-line1">NUEVA COLECCIÓN</span>
+              <span class="hero-line2">primavera andina.</span>
+            </h1>
+            <p class="hero-desc">Piezas tejidas a mano en Chinchero, inspiradas en los colores de los Andes.</p>
+            <a href="tienda.html" class="btn btn-primary">
+              Ver colección <i class="icon" data-lucide="arrow-right"></i>
+            </a>
+            <ul class="hero-bullets">
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="sparkles"></i></span>
+                <div><strong>Hecho a mano</strong><small>en Chinchero</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="award"></i></span>
+                <div><strong>Comercio justo</strong><small>certificado</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="heart"></i></span>
+                <div><strong>Apoyamos</strong><small>artesanas peruanas</small></div>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right">
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900" alt="Colección primavera andina" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <div class="hero-inner container">
+          <div class="hero-left">
+            <h1>
+              <span class="hero-line1">10% OFF</span>
+              <span class="hero-line2">en tu primera compra.</span>
+            </h1>
+            <p class="hero-desc">Suscríbete a nuestra comunidad y obtén un descuento exclusivo en tu primer pedido.</p>
+            <a href="tienda.html" class="btn btn-gold">
+              Aprovechar oferta <i class="icon" data-lucide="tag"></i>
+            </a>
+            <ul class="hero-bullets">
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="percent"></i></span>
+                <div><strong>Código</strong><small>ECOMODA10</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="gift"></i></span>
+                <div><strong>Envío gratis</strong><small>en pedidos +S/200</small></div>
+              </li>
+              <li>
+                <span class="hb-ic"><i class="icon" data-lucide="shield-check"></i></span>
+                <div><strong>30 días</strong><small>de devolución</small></div>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right">
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=900" alt="Oferta primera compra" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <button class="hero-arrow hero-arrow-r" aria-label="Siguiente"><i class="icon" data-lucide="chevron-right"></i></button>
+    <button class="hero-arrow hero-arrow-r" id="hero-next" aria-label="Siguiente"><i class="icon" data-lucide="chevron-right"></i></button>
+
+    <div class="hero-dots" id="hero-dots">
+      <button class="active" data-slide="0" aria-label="Slide 1"></button>
+      <button data-slide="1" aria-label="Slide 2"></button>
+      <button data-slide="2" aria-label="Slide 3"></button>
+    </div>
   </section>
 
   <!-- VALORES -->
@@ -288,7 +368,9 @@
     </div>
   </footer>
 
+  <script src="assets/js/footer-icons.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 </html>
