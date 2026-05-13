@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog EcoModa S.A. — Historias, consejos y reflexiones para una moda más responsable.">
+  <title>Blog — EcoModa S.A.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <script src="assets/js/analytics.js"></script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><i class="icon" data-lucide="truck"></i> ENVÍOS A TODO EL PERÚ</span>
+        <span class="sep">|</span>
+        <span><i class="icon" data-lucide="tag"></i> 10% OFF EN TU PRIMERA COMPRA · CÓDIGO: ECOMODA10</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo"><img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A."></a>
+      <nav class="header-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button aria-label="Buscar"><i class="icon" data-lucide="search"></i></button>
+        <button aria-label="Mi cuenta"><i class="icon" data-lucide="user"></i></button>
+        <button class="cart-btn" aria-label="Carrito">
+          <i class="icon" data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menú"><i class="icon" data-lucide="menu"></i></button>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menu-overlay"></div>
+  </header>
+
+  <!-- HERO BLOG -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="eyebrow no-lines" style="color: var(--blanco)">DIARIO DE MODA CONSCIENTE</span>
+      <h1>Blog EcoModa</h1>
+      <p>Historias, consejos y reflexiones para una moda más responsable</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="blog-body">
+    <div class="container blog-layout">
+
+      <div class="articulos">
+        <!-- Destacado -->
+        <article class="art-destacado" data-anim="fade-up">
+          <div class="art-img">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200" alt="Fast fashion" loading="lazy">
+            <span class="art-badge">DESTACADO</span>
+          </div>
+          <div class="art-body">
+            <div class="art-meta">
+              <span class="meta-cat">Sostenibilidad</span>
+              <span>·</span>
+              <span>11 May, 2026</span>
+              <span>·</span>
+              <span>6 min lectura</span>
+            </div>
+            <h2>5 razones para abandonar el fast fashion en 2026</h2>
+            <p>La industria de la moda rápida es la segunda más contaminante del mundo. Exploramos cómo decisiones cotidianas pueden transformar tu armario sin perder identidad ni presupuesto.</p>
+            <a href="#" class="link-leer">Leer artículo completo <i class="icon" data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+
+        <div class="art-grid">
+          <article class="art-card" data-anim="fade-up">
+            <div class="art-img"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800" alt="" loading="lazy"></div>
+            <div class="art-body">
+              <span class="art-tag">Tendencias · 04 May, 2026</span>
+              <h3>Paleta primavera: tierra y salvia</h3>
+              <p>Los tonos que dominarán esta temporada y cómo combinarlos sin esfuerzo.</p>
+            </div>
+          </article>
+          <article class="art-card" data-anim="fade-up">
+            <div class="art-img"><img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800" alt="" loading="lazy"></div>
+            <div class="art-body">
+              <span class="art-tag">Cuidados · 28 Abr, 2026</span>
+              <h3>Cómo lavar lino sin estropearlo</h3>
+              <p>Trucos sencillos para que tus prendas de lino te duren años intactas.</p>
+            </div>
+          </article>
+          <article class="art-card" data-anim="fade-up">
+            <div class="art-img"><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800" alt="" loading="lazy"></div>
+            <div class="art-body">
+              <span class="art-tag">Historias · 18 Abr, 2026</span>
+              <h3>Las artesanas de Chinchero</h3>
+              <p>Conocemos a las mujeres que tejen nuestras colecciones con técnicas ancestrales.</p>
+            </div>
+          </article>
+          <article class="art-card" data-anim="fade-up">
+            <div class="art-img"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800" alt="" loading="lazy"></div>
+            <div class="art-body">
+              <span class="art-tag">Guía · 05 Abr, 2026</span>
+              <h3>Capsule wardrobe en 12 prendas</h3>
+              <p>Construye un armario versátil que te dure años con muy pocas piezas clave.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="blog-sidebar">
+        <div class="sb-box">
+          <h3>Categorías</h3>
+          <a href="#"><span>Sostenibilidad</span><em>12</em></a>
+          <a href="#"><span>Tendencias</span><em>18</em></a>
+          <a href="#"><span>Cuidados</span><em>9</em></a>
+          <a href="#"><span>Historias</span><em>7</em></a>
+          <a href="#"><span>Guías</span><em>14</em></a>
+        </div>
+        <div class="sb-box sb-beige">
+          <h3>Lo más leído</h3>
+          <a href="#" class="popular">
+            <span class="pop-thumb" style="background:#D4B679"></span>
+            <div><strong>¿Qué es realmente la moda circular?</strong><small>4 min</small></div>
+          </a>
+          <a href="#" class="popular">
+            <span class="pop-thumb" style="background:#E8EEF4"></span>
+            <div><strong>Detrás del precio de un vestido eco</strong><small>5 min</small></div>
+          </a>
+          <a href="#" class="popular">
+            <span class="pop-thumb" style="background:#0B2545"></span>
+            <div><strong>Combinaciones para mujeres +40</strong><small>6 min</small></div>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A." class="invert-logo">
+          <div class="tag">VISTE TU ESTILO,<br>CUIDA EL PLANETA.</div>
+        </div>
+        <div class="footer-col"><h4>TIENDA</h4><a href="tienda.html">Todas las colecciones</a><a href="tienda.html">Vestidos</a><a href="tienda.html">Tops</a><a href="tienda.html">Pantalones</a><a href="tienda.html">Accesorios</a></div>
+        <div class="footer-col"><h4>INFORMACIÓN</h4><a href="nosotros.html">Sobre nosotros</a><a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></div>
+        <div class="footer-col"><h4>AYUDA</h4><a href="#">Preguntas frecuentes</a><a href="#">Guía de tallas</a><a href="#">Métodos de pago</a><a href="contacto.html">Contacto</a></div>
+        <div class="footer-col">
+          <h4>SÍGUENOS</h4>
+          <div class="footer-redes">
+            <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+          </div>
+          <div class="footer-copy">© <span id="year"></span> EcoModa S.A.<br>Todos los derechos reservados.</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Hecho con ♥ en Lima, Perú</span>
+        <div class="legales"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre la colección de moda sostenible de EcoModa S.A. — Vestidos, tops, pantalones y accesorios eco-amigables.">
+  <title>Tienda — EcoModa S.A.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/tienda.css">
+  <script src="assets/js/analytics.js"></script>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><i class="icon" data-lucide="truck"></i> ENVÍOS A TODO EL PERÚ</span>
+        <span class="sep">|</span>
+        <span><i class="icon" data-lucide="tag"></i> 10% OFF EN TU PRIMERA COMPRA · CÓDIGO: ECOMODA10</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo"><img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A."></a>
+      <nav class="header-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html" class="active">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button aria-label="Buscar"><i class="icon" data-lucide="search"></i></button>
+        <button aria-label="Mi cuenta"><i class="icon" data-lucide="user"></i></button>
+        <button class="cart-btn" aria-label="Carrito">
+          <i class="icon" data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menú"><i class="icon" data-lucide="menu"></i></button>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menu-overlay"></div>
+  </header>
+
+  <!-- HERO TIENDA -->
+  <section class="tienda-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <i class="icon" data-lucide="chevron-right"></i>
+        <span>Tienda</span>
+      </nav>
+      <h1>Nuestra colección</h1>
+      <p>120 prendas conscientes esperando por ti</p>
+    </div>
+  </section>
+
+  <!-- BODY TIENDA -->
+  <section class="tienda-body">
+    <div class="container tienda-layout">
+
+      <aside class="sidebar" data-anim="fade-right">
+        <div class="sidebar-head">
+          <h3>Filtros</h3>
+          <button class="link-gold" id="clear-filters">Limpiar</button>
+        </div>
+
+        <div class="filter-group" data-filter-type="categoria">
+          <h4>CATEGORÍA</h4>
+          <label><input type="checkbox" value="Vestidos"> Vestidos <span>(2)</span></label>
+          <label><input type="checkbox" value="Camisas"> Camisas <span>(2)</span></label>
+          <label><input type="checkbox" value="Pantalones"> Pantalones <span>(2)</span></label>
+          <label><input type="checkbox" value="Accesorios"> Accesorios <span>(2)</span></label>
+          <label><input type="checkbox" value="Calzado"> Calzado <span>(1)</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h4>PRECIO</h4>
+          <input type="range" min="30" max="200" value="200" id="price-slider">
+          <div class="price-range">
+            <span>S/ 30</span>
+            <span id="price-value">S/ 200</span>
+          </div>
+        </div>
+
+        <div class="filter-group" data-filter-type="talla">
+          <h4>TALLA</h4>
+          <div class="talla-row">
+            <button class="talla" data-value="XS">XS</button>
+            <button class="talla" data-value="S">S</button>
+            <button class="talla" data-value="M">M</button>
+            <button class="talla" data-value="L">L</button>
+            <button class="talla" data-value="XL">XL</button>
+          </div>
+        </div>
+
+        <div class="filter-group" data-filter-type="color">
+          <h4>COLOR</h4>
+          <div class="color-row">
+            <button class="color" data-value="Azul marino" style="background:#0B2545" aria-label="Azul marino"></button>
+            <button class="color" data-value="Dorado" style="background:#D4B679" aria-label="Dorado"></button>
+            <button class="color" data-value="Azul cielo" style="background:#E8EEF4" aria-label="Azul cielo"></button>
+            <button class="color" data-value="Beige" style="background:#F5EDE3" aria-label="Beige"></button>
+            <button class="color" data-value="Gris" style="background:#5F6E80" aria-label="Gris"></button>
+            <button class="color" data-value="Crema" style="background:#FBF8F3" aria-label="Crema"></button>
+          </div>
+        </div>
+
+        <div class="filter-group" data-filter-type="material">
+          <h4>MATERIAL</h4>
+          <label><input type="checkbox" value="Algodón orgánico"> Algodón orgánico</label>
+          <label><input type="checkbox" value="Lino"> Lino</label>
+          <label><input type="checkbox" value="Reciclado"> Reciclado</label>
+          <label><input type="checkbox" value="Bambú"> Bambú</label>
+        </div>
+      </aside>
+
+      <div class="productos-main">
+
+        <div class="toolbar">
+          <span id="results-count">Mostrando 1 - 9 de 120 productos</span>
+          <div class="toolbar-right">
+            <button class="orden-sel">
+              Ordenar: Más recientes <i class="icon" data-lucide="chevron-down"></i>
+            </button>
+            <div class="view-toggle">
+              <button class="vt active" aria-label="Grid"><i class="icon" data-lucide="grid-3x3"></i></button>
+              <button class="vt" aria-label="Lista"><i class="icon" data-lucide="list"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="productos-grid" id="productos-grid">
+          <!-- Productos generados por JS -->
+        </div>
+
+        <nav class="pagination">
+          <button class="pag" aria-label="Anterior"><i class="icon" data-lucide="chevron-left"></i></button>
+          <button class="pag active">1</button>
+          <button class="pag">2</button>
+          <button class="pag">3</button>
+          <span class="pag-dots">...</span>
+          <button class="pag">14</button>
+          <button class="pag pag-next" aria-label="Siguiente"><i class="icon" data-lucide="chevron-right"></i></button>
+        </nav>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A." class="invert-logo">
+          <div class="tag">VISTE TU ESTILO,<br>CUIDA EL PLANETA.</div>
+        </div>
+        <div class="footer-col">
+          <h4>TIENDA</h4>
+          <a href="tienda.html">Todas las colecciones</a>
+          <a href="tienda.html">Vestidos</a>
+          <a href="tienda.html">Tops</a>
+          <a href="tienda.html">Pantalones</a>
+          <a href="tienda.html">Accesorios</a>
+        </div>
+        <div class="footer-col">
+          <h4>INFORMACIÓN</h4>
+          <a href="nosotros.html">Sobre nosotros</a>
+          <a href="#">Envíos</a>
+          <a href="#">Cambios y devoluciones</a>
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+        <div class="footer-col">
+          <h4>AYUDA</h4>
+          <a href="#">Preguntas frecuentes</a>
+          <a href="#">Guía de tallas</a>
+          <a href="#">Métodos de pago</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>SÍGUENOS</h4>
+          <div class="footer-redes">
+            <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+          </div>
+          <div class="footer-copy">
+            © <span id="year"></span> EcoModa S.A.<br>
+            Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Hecho con ♥ en Lima, Perú</span>
+        <div class="legales">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tienda.js"></script>
+</body>
+</html>

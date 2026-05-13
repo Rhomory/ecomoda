@@ -1,0 +1,194 @@
+/* ============================================
+   EcoModa — gracias.css
+   ============================================ */
+
+.gracias-section { padding: 40px 0 100px; }
+.gracias-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .gracias-layout { grid-template-columns: 1fr; }
+}
+
+.gracias-card {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  text-align: center;
+}
+@media (max-width: 540px) {
+  .gracias-card { padding: 32px 20px; }
+}
+
+.check {
+  width: 100px; height: 100px;
+  margin: 0 auto 24px;
+}
+.check svg { width: 100%; height: 100%; }
+.check-circ {
+  fill: none;
+  stroke: var(--dorado);
+  stroke-width: 3;
+  stroke-dasharray: 226;
+  stroke-dashoffset: 226;
+  animation: drawCirc 0.7s ease forwards;
+}
+.check-tick {
+  fill: none;
+  stroke: var(--azul-profundo);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: drawTick 0.5s 0.6s ease forwards;
+}
+@keyframes drawCirc { to { stroke-dashoffset: 0; } }
+@keyframes drawTick { to { stroke-dashoffset: 0; } }
+
+.gracias-card h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin: 12px 0 14px;
+}
+.gracias-card .lead {
+  font-size: 16px;
+  color: var(--texto-suave);
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+.orden-info {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  background: var(--beige-arena);
+  border-radius: var(--radius-sm);
+  padding: 18px 24px;
+  margin: 24px auto;
+}
+.orden-info .item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.orden-info .item span:first-child {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+.orden-info .item strong {
+  font-size: 14px;
+  color: var(--azul-profundo);
+  font-family: var(--font-texto);
+}
+
+.gracias-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 28px 0;
+  flex-wrap: wrap;
+}
+
+.gracias-tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+  border-top: 1px solid var(--borde);
+  padding-top: 28px;
+}
+.gracias-tips .tip {
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  align-items: flex-start;
+}
+.gracias-tips .icon-lg { color: var(--dorado); flex-shrink: 0; margin-top: 2px; }
+.gracias-tips strong {
+  display: block;
+  font-size: 13px;
+  color: var(--azul-profundo);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.gracias-tips span { font-size: 12px; color: var(--texto-suave); }
+@media (max-width: 640px) {
+  .gracias-tips { grid-template-columns: 1fr; }
+}
+
+/* Detalle del pedido */
+.gracias-detalle {
+  background: var(--azul-profundo);
+  color: var(--azul-cielo);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  position: sticky;
+  top: 100px;
+}
+.gracias-detalle h3 {
+  color: var(--blanco);
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.gd-section {
+  border-top: 1px solid rgba(212, 182, 121, 0.2);
+  padding: 14px 0;
+}
+.gd-section:first-of-type { border-top: 0; padding-top: 0; }
+.gd-section h4 {
+  color: var(--dorado);
+  font-family: var(--font-texto);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.gd-section p { font-size: 13px; margin: 0; line-height: 1.5; }
+.gd-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+.gd-item .img {
+  width: 48px; height: 60px;
+  background: var(--azul-marino);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.gd-item .img img { width: 100%; height: 100%; object-fit: cover; }
+.gd-item .img .q {
+  position: absolute;
+  top: -6px; right: -6px;
+  background: var(--dorado);
+  color: var(--azul-profundo);
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.gd-item strong { display: block; font-size: 13px; color: var(--blanco); }
+.gd-item span { font-size: 11px; opacity: 0.7; }
+.gd-item .price { color: var(--dorado); font-weight: 700; font-size: 13px; }
+.gd-tot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(212, 182, 121, 0.3);
+}
+.gd-tot strong:last-child { color: var(--dorado); font-size: 22px; }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="¡Gracias por tu compra! — EcoModa S.A.">
+  <title>¡Pago exitoso! — EcoModa S.A.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/gracias.css">
+  <script src="assets/js/analytics.js"></script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><i class="icon" data-lucide="truck"></i> ENVÍOS A TODO EL PERÚ</span>
+        <span class="sep">|</span>
+        <span><i class="icon" data-lucide="tag"></i> 10% OFF EN TU PRIMERA COMPRA · CÓDIGO: ECOMODA10</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo"><img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A."></a>
+      <nav class="header-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button aria-label="Buscar"><i class="icon" data-lucide="search"></i></button>
+        <button aria-label="Mi cuenta"><i class="icon" data-lucide="user"></i></button>
+        <button class="cart-btn" aria-label="Carrito">
+          <i class="icon" data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menú"><i class="icon" data-lucide="menu"></i></button>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menu-overlay"></div>
+  </header>
+
+  <!-- Stepper completo -->
+  <section class="checkout-steps">
+    <div class="container">
+      <ol class="steps">
+        <li class="step done"><span>1</span> Carrito</li>
+        <li class="step done"><span>2</span> Datos y pago</li>
+        <li class="step done"><span>3</span> Confirmación</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gracias-section">
+    <div class="container gracias-layout">
+      <div class="gracias-card" data-anim="zoom-in">
+        <div class="check">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle class="check-circ" cx="40" cy="40" r="36"/>
+            <path class="check-tick" d="M22 42 L36 56 L60 28"/>
+          </svg>
+        </div>
+        <span class="eyebrow no-lines">PAGO REALIZADO CON ÉXITO</span>
+        <h1>¡Gracias por tu compra!</h1>
+        <p class="lead">El pago se realizó correctamente. Puedes revisar tu cuenta para ver más detalles del producto y el estado de tu envío.</p>
+
+        <div class="orden-info" id="orden-info"></div>
+
+        <div class="gracias-actions">
+          <a href="index.html" class="btn btn-outline">Volver al inicio</a>
+          <a href="tienda.html" class="btn btn-primary">Seguir comprando <i class="icon" data-lucide="arrow-right"></i></a>
+        </div>
+
+        <div class="gracias-tips">
+          <div class="tip">
+            <i class="icon-lg" data-lucide="mail"></i>
+            <div><strong>Recibirás un correo</strong><span>con el detalle de tu pedido y el comprobante.</span></div>
+          </div>
+          <div class="tip">
+            <i class="icon-lg" data-lucide="package"></i>
+            <div><strong>Tu pedido se prepara</strong><span>Estará en camino en las próximas 24-48h.</span></div>
+          </div>
+          <div class="tip">
+            <i class="icon-lg" data-lucide="truck"></i>
+            <div><strong>Entrega 3-5 días</strong><span>Te avisaremos cuando salga del taller.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gracias-detalle" id="gracias-detalle" data-anim="fade-up" data-anim-delay="200"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo/ecomoda_logo.svg" alt="EcoModa S.A." class="invert-logo">
+          <div class="tag">VISTE TU ESTILO,<br>CUIDA EL PLANETA.</div>
+        </div>
+        <div class="footer-col"><h4>TIENDA</h4><a href="tienda.html">Todas las colecciones</a><a href="tienda.html">Vestidos</a><a href="tienda.html">Tops</a><a href="tienda.html">Pantalones</a><a href="tienda.html">Accesorios</a></div>
+        <div class="footer-col"><h4>INFORMACIÓN</h4><a href="nosotros.html">Sobre nosotros</a><a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></div>
+        <div class="footer-col"><h4>AYUDA</h4><a href="#">Preguntas frecuentes</a><a href="#">Guía de tallas</a><a href="#">Métodos de pago</a><a href="contacto.html">Contacto</a></div>
+        <div class="footer-col">
+          <h4>SÍGUENOS</h4>
+          <div class="footer-redes">
+            <a href="#" aria-label="Instagram"><i class="icon" data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="icon" data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon" data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i class="icon" data-lucide="youtube"></i></a>
+          </div>
+          <div class="footer-copy">© <span id="year"></span> EcoModa S.A.<br>Todos los derechos reservados.</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Hecho con ♥ en Lima, Perú</span>
+        <div class="legales"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gracias.js"></script>
+</body>
+</html>
