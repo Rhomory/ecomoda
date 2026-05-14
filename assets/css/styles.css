@@ -165,7 +165,14 @@ svg.lucide.icon-lg { width: 24px; height: 24px; }
   font-weight: 600;
   letter-spacing: 1.5px;
   padding: 6px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: transform 0.3s ease;
 }
+body.topbar-hidden .topbar { transform: translateY(-100%); }
 .topbar .container {
   display: flex;
   justify-content: space-between;
@@ -181,24 +188,29 @@ svg.lucide.icon-lg { width: 24px; height: 24px; }
 .topbar-right a { color: var(--dorado); display: inline-flex; }
 .topbar-right .icon { width: 12px; height: 12px; }
 
-/* ===== Header ===== */
+/* ===== Header (fixed encima del topbar, sube cuando topbar se oculta) ===== */
 .header {
   background: var(--blanco);
   padding: 18px 0;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: var(--topbar-h, 30px);
+  left: 0;
+  right: 0;
   z-index: 100;
   border-bottom: 1px solid var(--borde);
-  transition: box-shadow var(--transition);
+  transition: top 0.3s ease, box-shadow var(--transition);
 }
 .header.scrolled { box-shadow: var(--shadow-sm); }
+body.topbar-hidden .header { top: 0; }
+/* Reservamos espacio en el body para compensar el header fixed + topbar */
+body { padding-top: calc(var(--topbar-h, 30px) + var(--header-h, 95px)); }
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
 }
-.header-logo img { height: 56px; width: auto; display: block; }
+.header-logo img { height: 78px; width: auto; display: block; }
 .header-nav { display: flex; gap: 32px; }
 .header-nav a {
   font-size: 12px;
@@ -304,7 +316,9 @@ svg.lucide.icon-lg { width: 24px; height: 24px; }
   .topbar-left .sep,
   .topbar-left span:nth-child(3) { display: none; }
   .header .container { gap: 12px; }
-  .header-logo img { height: 40px; }
+  .header-logo img { height: 56px; }
+  .header { padding: 10px 0; }
+  body { padding-top: calc(var(--topbar-h, 30px) + 76px); }
 }
 
 /* ===== Ajustes globales mobile ===== */

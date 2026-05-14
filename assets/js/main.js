@@ -17,10 +17,27 @@
   /* ---------- Año dinámico ---------- */
   document.querySelectorAll('#year').forEach(el => el.textContent = new Date().getFullYear());
 
-  /* ---------- Sombra del header al scrollear ---------- */
+  /* ---------- Header fijo + ocultar topbar al scrollear ---------- */
   const header = document.querySelector('.header');
+  const topbar = document.querySelector('.topbar');
+
+  function setHeaderVars() {
+    if (topbar) {
+      document.documentElement.style.setProperty('--topbar-h', topbar.offsetHeight + 'px');
+    }
+    if (header) {
+      document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    }
+  }
+  setHeaderVars();
+  window.addEventListener('resize', setHeaderVars);
+
   if (header) {
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    const onScroll = () => {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 8);
+      document.body.classList.toggle('topbar-hidden', y > 40);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }

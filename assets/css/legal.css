@@ -1,0 +1,160 @@
+/* ============================================
+   EcoModa — Páginas legales (privacidad, términos)
+   ============================================ */
+
+.legal-hero {
+  background: linear-gradient(180deg, var(--azul-cielo) 0%, var(--blanco) 100%);
+  padding: 64px 0 48px;
+  text-align: center;
+}
+.legal-hero .eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+.legal-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 0 0 12px;
+}
+.legal-hero p {
+  color: var(--texto-suave);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.legal-body {
+  padding: 56px 0 96px;
+}
+.legal-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Tabla de contenidos */
+.legal-toc {
+  position: sticky;
+  top: calc(var(--header-h, 95px) + 16px);
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.legal-toc h4 {
+  font-family: var(--font-texto);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--dorado);
+  margin: 0 0 14px;
+}
+.legal-toc ul { display: flex; flex-direction: column; gap: 8px; }
+.legal-toc a {
+  font-size: 12px;
+  color: var(--texto-suave);
+  display: block;
+  padding: 4px 0;
+  border-left: 2px solid transparent;
+  padding-left: 10px;
+  transition: all var(--transition);
+}
+.legal-toc a:hover {
+  color: var(--azul-profundo);
+  border-left-color: var(--dorado);
+}
+
+/* Contenido */
+.legal-content {
+  background: var(--blanco);
+  border-radius: var(--radius-md);
+  padding: 40px 44px;
+  border: 1px solid var(--borde);
+}
+.legal-content h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.7rem);
+  font-style: italic;
+  margin: 36px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borde);
+  scroll-margin-top: calc(var(--header-h, 95px) + 16px);
+}
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--texto);
+  margin: 0 0 16px;
+}
+.legal-content ul {
+  margin: 0 0 20px;
+  padding-left: 0;
+}
+.legal-content ul li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--texto);
+  padding-left: 24px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.legal-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--dorado);
+  border-radius: 50%;
+}
+.legal-content p a,
+.legal-content ul a {
+  color: var(--azul-profundo);
+  font-weight: 600;
+  border-bottom: 1px solid var(--dorado);
+}
+.legal-content p a:hover,
+.legal-content ul a:hover { color: var(--dorado); }
+
+/* El botón dentro de legal-cta conserva su estilo de .btn */
+.legal-cta .btn { border-bottom: 0; }
+.legal-cta .btn-primary { color: var(--blanco); }
+.legal-cta .btn-primary:hover { color: var(--blanco); }
+.legal-content strong { color: var(--azul-profundo); }
+
+.legal-cta {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--borde);
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .legal-toc {
+    position: static;
+    order: -1;
+  }
+  .legal-toc ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .legal-body { padding: 40px 0 64px; }
+  .legal-content { padding: 28px 22px; }
+  .legal-content h2 { font-size: 1.3rem; margin: 28px 0 12px; }
+  .legal-content p,
+  .legal-content ul li { font-size: 14px; }
+  .legal-toc ul { grid-template-columns: 1fr; }
+}

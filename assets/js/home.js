@@ -63,3 +63,39 @@
 
   startAutoplay();
 })();
+
+/* ============================================
+   Testimonios — dots sincronizados con scroll
+   (solo aplica en mobile, donde el grid es scroll horizontal)
+   ============================================ */
+(function () {
+  'use strict';
+  const grid = document.getElementById('testi-grid');
+  const dotsWrap = document.getElementById('testi-dots');
+  if (!grid || !dotsWrap) return;
+
+  const dots = dotsWrap.querySelectorAll('button');
+  const cards = grid.querySelectorAll('.testi-card');
+  if (!dots.length || !cards.length) return;
+
+  dots.forEach((d, i) => {
+    d.addEventListener('click', () => {
+      cards[i]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  });
+
+  function updateActiveDot() {
+    const center = grid.scrollLeft + grid.clientWidth / 2;
+    let best = 0;
+    let bestDist = Infinity;
+    cards.forEach((c, i) => {
+      const cardCenter = c.offsetLeft + c.offsetWidth / 2;
+      const dist = Math.abs(cardCenter - center);
+      if (dist < bestDist) { bestDist = dist; best = i; }
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === best));
+  }
+  grid.addEventListener('scroll', () => {
+    window.requestAnimationFrame(updateActiveDot);
+  }, { passive: true });
+})();
